@@ -1,0 +1,8 @@
+dotnet new mvc
+dotnet watch run
+dotnet run
+dotnet restore
+dotnet new classlib
+dotnet new classlib -o WebApp.Data.EF
+dotnet new sln
+dotnet add reference
