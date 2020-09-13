@@ -1,0 +1,194 @@
+/* html, head, body, header, nav, section, footer, nav, div, figure, blockquote, ul-li, img, a, h, p, i,   */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: #555;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.main-center {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.paragraph {
+    background-color: black;
+    width: 75%; /* 75% of parrent class */
+}
+
+.text {
+    color: bisque;
+    font-size: 240%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-top: -2px;
+}
+
+.position-parent {
+    position: relative;
+    /* không có class cha thì lấy về class relative gần nhất cho tới root */
+}
+.position-child {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background {
+    background-image: linear-gradient(rgba(206, 206, 206, 0.7), rgba(0,0,0,0.7)), url(366638.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    /* text class */
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 300;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 200px;
+}
+.bnt-full {
+    background-color: yellow;
+    color: #fff;
+}
+.btn:link,
+.btn:visited,
+.btn:hover,
+.btn:active {
+    background-color: aqua;
+}
+
+ul {
+    /* text */
+    list-style: none;
+}
+
+/* tạo gạch ngang sau thẻ */
+h2::after {
+    display: block;
+    content: " ";
+    background-color: #ccc;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.center {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+
+}
+
+/* 4 li sẽ nằm cạnh nhau trên 1 hàng vì block với with = 1/4 */
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.steps-box:last-child {
+    text-align: left;
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+*:focus {outline: none;}
